@@ -1,5 +1,5 @@
 .app-footer {
-  background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
+  background: linear-gradient(135deg, #8b6b4a 0%, #a67c52 100%);
   color: white;
   margin-top: auto;
 }
@@ -35,20 +35,20 @@
 
 .footer-logo-icon {
   font-size: 2rem;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 2px 4px rgba(139, 107, 74, 0.3));
 }
 
 .footer-logo-text {
   font-size: 1.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #74b9ff, #a29bfe);
+  background: linear-gradient(135deg, #f1c27d, #deb887);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .footer-description {
-  color: #b2bec3;
+  color: #f4e4d0;
   line-height: 1.6;
   margin: 0;
 }
@@ -61,7 +61,7 @@
 .social-link {
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(244, 228, 208, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -72,7 +72,7 @@
 }
 
 .social-link:hover {
-  background: rgba(116, 185, 255, 0.3);
+  background: rgba(241, 194, 125, 0.3);
   transform: translateY(-2px);
 }
 
@@ -84,7 +84,7 @@
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 20px;
-  color: #74b9ff;
+  color: #f1c27d;
 }
 
 .footer-link-list {
@@ -97,14 +97,14 @@
 }
 
 .footer-link {
-  color: #b2bec3;
+  color: #f4e4d0;
   text-decoration: none;
   transition: all 0.3s ease;
   padding: 5px 0;
 }
 
 .footer-link:hover {
-  color: #74b9ff;
+  color: #f1c27d;
   padding-left: 5px;
 }
 
@@ -133,7 +133,7 @@
 
 .stat-label {
   font-size: 0.8rem;
-  color: #b2bec3;
+  color: #f4e4d0;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -163,12 +163,12 @@
 }
 
 .contact-text {
-  color: #b2bec3;
+  color: #f4e4d0;
   font-size: 0.9rem;
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(244, 228, 208, 0.2);
   padding: 20px 0;
 }
 
@@ -181,12 +181,12 @@
 }
 
 .copyright {
-  color: #b2bec3;
+  color: #f4e4d0;
   font-size: 0.9rem;
 }
 
 .attribution {
-  color: #b2bec3;
+  color: #f4e4d0;
   font-size: 0.9rem;
   display: flex;
   align-items: center;
@@ -194,29 +194,79 @@
 }
 
 .api-link {
-  color: #74b9ff;
+  color: #f1c27d;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .api-link:hover {
-  color: #a29bfe;
+  color: #deb887;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
+/* Responsive styles remain the same structure with updated colors */
+@media (min-width: 1200px) {
+  .footer-container {
+    max-width: 1400px;
+    padding: 0 40px;
+  }
+  
   .footer-content {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2.5fr 1fr 1fr 1fr;
+    gap: 50px;
+    padding: 60px 0 40px;
+  }
+  
+  .footer-logo-text {
+    font-size: 1.7rem;
+  }
+  
+  .footer-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .footer-container {
+    padding: 0 30px;
+  }
+  
+  .footer-content {
+    gap: 35px;
+    padding: 50px 0 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer-container {
+    padding: 0 25px;
+  }
+  
+  .footer-content {
+    grid-template-columns: 2fr 1fr 1fr;
     gap: 30px;
+    padding: 45px 0 25px;
   }
   
   .footer-about {
     grid-column: 1 / -1;
+    margin-bottom: 10px;
+  }
+  
+  .footer-logo-text {
+    font-size: 1.4rem;
+  }
+  
+  .footer-title {
+    font-size: 1.1rem;
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 600px) and (max-width: 767px) {
+  .footer-container {
+    padding: 0 20px;
+  }
+  
   .footer-content {
     grid-template-columns: 1fr 1fr;
     gap: 25px;
@@ -225,6 +275,11 @@
   
   .footer-about {
     grid-column: 1 / -1;
+    margin-bottom: 15px;
+  }
+  
+  .social-links {
+    justify-content: center;
   }
   
   .footer-bottom-content {
@@ -234,7 +289,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 480px) and (max-width: 599px) {
   .footer-container {
     padding: 0 15px;
   }
@@ -242,23 +297,40 @@
   .footer-content {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 30px 0 20px;
+    padding: 35px 0 20px;
   }
   
   .footer-about {
     grid-column: 1;
+    text-align: center;
+  }
+  
+  .footer-links {
+    text-align: center;
+  }
+  
+  .footer-logo {
+    justify-content: center;
   }
   
   .social-links {
     justify-content: center;
   }
   
-  .weather-stats {
-    align-items: center;
-  }
-  
+  .weather-stats,
   .contact-info {
     align-items: center;
     text-align: center;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+  }
+  
+  .copyright,
+  .attribution {
+    font-size: 0.8rem;
   }
 }

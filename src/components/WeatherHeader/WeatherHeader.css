@@ -3,14 +3,14 @@
 }
 
 .weather-title {
-  color: #2d3436;
+  color: #8b6b4a;
   font-size: 2.5rem;
   margin-bottom: 10px;
   font-weight: 300;
 }
 
 .location-info {
-  color: #636e72;
+  color: #a67c52;
   font-size: 1.2rem;
   display: flex;
   align-items: center;
@@ -24,7 +24,7 @@
 }
 
 .refresh-btn {
-  background: #74b9ff;
+  background: linear-gradient(135deg, #deb887, #cd853f);
   color: white;
   border: none;
   border-radius: 25px;
@@ -35,11 +35,13 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
+  box-shadow: 0 4px 15px rgba(222, 184, 135, 0.3);
 }
 
 .refresh-btn:hover:not(:disabled) {
-  background: #0984e3;
+  background: linear-gradient(135deg, #cd853f, #a0522d);
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(222, 184, 135, 0.4);
 }
 
 .refresh-btn:disabled {

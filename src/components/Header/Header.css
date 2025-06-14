@@ -1,8 +1,8 @@
 .app-header {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(139, 107, 74, 0.95);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(241, 194, 125, 0.3);
+  box-shadow: 0 2px 20px rgba(139, 107, 74, 0.2);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -20,6 +20,8 @@
 
 .header-left {
   flex: 1;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .logo-section {
@@ -30,7 +32,7 @@
 
 .logo-icon {
   font-size: 2.5rem;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 2px 4px rgba(139, 107, 74, 0.3));
 }
 
 .logo-text {
@@ -41,9 +43,9 @@
 .logo-title {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #2d3436;
+  color: #fff8f0;
   margin: 0;
-  background: linear-gradient(135deg, #74b9ff, #0984e3);
+  background: linear-gradient(135deg, #f1c27d, #deb887);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -51,7 +53,7 @@
 
 .logo-subtitle {
   font-size: 0.8rem;
-  color: #636e72;
+  color: #f4e4d0;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -70,7 +72,7 @@
 
 .nav-link {
   text-decoration: none;
-  color: #636e72;
+  color: #f4e4d0;
   font-weight: 500;
   padding: 8px 16px;
   border-radius: 20px;
@@ -79,13 +81,13 @@
 }
 
 .nav-link:hover {
-  color: #74b9ff;
-  background: rgba(116, 185, 255, 0.1);
+  color: #f1c27d;
+  background: rgba(241, 194, 125, 0.15);
 }
 
 .nav-link.active {
-  color: #74b9ff;
-  background: rgba(116, 185, 255, 0.15);
+  color: #f1c27d;
+  background: rgba(241, 194, 125, 0.2);
 }
 
 .nav-link.active::after {
@@ -96,7 +98,7 @@
   transform: translateX(-50%);
   width: 20px;
   height: 2px;
-  background: #74b9ff;
+  background: #f1c27d;
   border-radius: 1px;
 }
 
@@ -113,20 +115,102 @@
 .current-time {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #2d3436;
+  color: #fff8f0;
   font-family: 'Courier New', monospace;
 }
 
 .current-date {
   font-size: 0.85rem;
-  color: #636e72;
+  color: #f4e4d0;
   margin-top: 2px;
 }
 
-@media (max-width: 768px) {
+/* Responsive styles remain the same with updated colors */
+@media (min-width: 1200px) {
   .header-container {
+    max-width: 1400px;
+    padding: 0 40px;
+    height: 85px;
+  }
+  
+  .logo-title {
+    font-size: 2rem;
+  }
+  
+  .logo-subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .nav-menu {
+    gap: 40px;
+  }
+  
+  .nav-link {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  
+  .current-time {
+    font-size: 1.3rem;
+  }
+  
+  .current-date {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .header-container {
+    max-width: 1200px;
+    padding: 0 30px;
+    height: 80px;
+  }
+  
+  .logo-title {
+    font-size: 1.8rem;
+  }
+  
+  .nav-menu {
+    gap: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header-container {
+    padding: 0 25px;
+    height: 75px;
+  }
+  
+  .logo-title {
+    font-size: 1.6rem;
+  }
+  
+  .logo-subtitle {
+    font-size: 0.75rem;
+  }
+  
+  .nav-menu {
+    gap: 20px;
+  }
+  
+  .nav-link {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .current-time {
+    font-size: 1.1rem;
+  }
+  
+  .current-date {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .header-container {
+    padding: 0 20px;
     height: 70px;
-    padding: 0 15px;
   }
   
   .logo-title {
@@ -150,12 +234,43 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 480px) and (max-width: 599px) {
+  .header-container {
+    padding: 0 15px;
+    height: 65px;
+  }
+  
+  .logo-icon {
+    font-size: 2rem;
+  }
+  
+  .logo-title {
+    font-size: 1.3rem;
+  }
+  
+  .logo-subtitle {
+    font-size: 0.65rem;
+  }
+  
+  .header-center {
+    display: none;
+  }
+  
+  .current-time {
+    font-size: 0.95rem;
+  }
+  
+  .current-date {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 479px) {
   .header-container {
     flex-direction: column;
     height: auto;
     padding: 15px;
-    gap: 10px;
+    gap: 12px;
   }
   
   .header-left,
@@ -163,7 +278,31 @@
     flex: none;
   }
   
+  .logo-icon {
+    font-size: 1.8rem;
+  }
+  
+  .logo-title {
+    font-size: 1.2rem;
+  }
+  
+  .logo-subtitle {
+    font-size: 0.6rem;
+  }
+  
+  .header-center {
+    display: none;
+  }
+  
   .datetime-section {
     text-align: center;
+  }
+  
+  .current-time {
+    font-size: 0.9rem;
+  }
+  
+  .current-date {
+    font-size: 0.65rem;
   }
 }
