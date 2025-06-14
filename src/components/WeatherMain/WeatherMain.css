@@ -1,0 +1,50 @@
+.weather-main {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.temperature-section {
+  text-align: center;
+}
+
+.temperature {
+  font-size: 4rem;
+  font-weight: 300;
+  color: #2d3436;
+  margin-bottom: 5px;
+}
+
+.temperature-sub {
+  font-size: 1.1rem;
+  color: #636e72;
+}
+
+.condition-section {
+  text-align: center;
+}
+
+.condition {
+  font-size: 1.3rem;
+  color: #2d3436;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.local-time {
+  font-size: 0.9rem;
+  color: #636e72;
+}
+
+@media (max-width: 768px) {
+  .temperature {
+    font-size: 3rem;
+  }
+  
+  .condition {
+    font-size: 1.2rem;
+  }
+}
