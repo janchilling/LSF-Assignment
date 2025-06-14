@@ -3,8 +3,6 @@ const API_BASE_URL = 'https://api.weatherapi.com/v1';
 
 class WeatherService {
   async getCurrentWeather(location) {
-
-    console.log(API_KEY)
     const response = await fetch(
       `${API_BASE_URL}/current.json?key=${API_KEY}&q=${location}&aqi=yes`
     );
