@@ -20,8 +20,20 @@ jobs:
         node-version: '18'
         cache: 'npm'
         
+    # OPTION A: Use npm install instead of npm ci (more flexible)
     - name: Install dependencies
-      run: npm ci
+      run: npm install
+      
+    # OPTION B: Alternative - use npm ci with fallback
+    # - name: Install dependencies
+    #   run: |
+    #     if npm ci; then
+    #       echo "npm ci succeeded"
+    #     else
+    #       echo "npm ci failed, falling back to npm install"
+    #       rm -rf node_modules
+    #       npm install
+    #     fi
       
     - name: Run tests (if any)
       run: npm test -- --coverage --watchAll=false
