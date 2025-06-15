@@ -221,8 +221,13 @@
     font-size: 0.7rem;
   }
   
-  .header-center {
-    display: none;
+  .nav-menu {
+    gap: 15px;
+  }
+  
+  .nav-link {
+    padding: 6px 10px;
+    font-size: 0.85rem;
   }
   
   .current-time {
@@ -245,19 +250,24 @@
   }
   
   .logo-title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   
   .logo-subtitle {
     font-size: 0.65rem;
   }
   
-  .header-center {
-    display: none;
+  .nav-menu {
+    gap: 10px;
+  }
+  
+  .nav-link {
+    padding: 5px 8px;
+    font-size: 0.8rem;
   }
   
   .current-time {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
   
   .current-date {
@@ -265,12 +275,13 @@
   }
 }
 
+
 @media (max-width: 479px) {
   .header-container {
     flex-direction: column;
     height: auto;
-    padding: 15px;
-    gap: 12px;
+    padding: 12px 15px;
+    gap: 8px;
   }
   
   .header-left,
@@ -283,7 +294,7 @@
   }
   
   .logo-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   
   .logo-subtitle {
@@ -291,15 +302,28 @@
   }
   
   .header-center {
-    display: none;
+    order: 3;
+    width: 100%;
+  }
+  
+  .nav-menu {
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .nav-link {
+    padding: 4px 8px;
+    font-size: 0.75rem;
   }
   
   .datetime-section {
     text-align: center;
+    order: 2;
   }
   
   .current-time {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
   
   .current-date {

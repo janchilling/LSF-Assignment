@@ -1,5 +1,5 @@
 .app-footer {
-  background: rgba(113, 87, 87, 0.95);
+  background: linear-gradient(135deg, #8b6b4a 0%, #a67c52 100%);
   color: white;
   margin-top: auto;
 }
@@ -124,6 +124,7 @@
   font-size: 1.3rem;
   width: 30px;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .stat-content {
@@ -160,11 +161,13 @@
   font-size: 1.1rem;
   width: 25px;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .contact-text {
   color: #f4e4d0;
   font-size: 0.9rem;
+  word-break: break-word;
 }
 
 .footer-bottom {
@@ -191,6 +194,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
+  flex-wrap: wrap;
 }
 
 .api-link {
@@ -204,7 +208,7 @@
   color: #deb887;
 }
 
-/* Responsive styles remain the same structure with updated colors */
+/* Large Desktop (1200px+) */
 @media (min-width: 1200px) {
   .footer-container {
     max-width: 1400px;
@@ -226,6 +230,7 @@
   }
 }
 
+/* Normal Laptop/Desktop (1024px - 1199px) */
 @media (min-width: 1024px) and (max-width: 1199px) {
   .footer-container {
     padding: 0 30px;
@@ -237,75 +242,21 @@
   }
 }
 
+/* Small Laptop (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .footer-container {
     padding: 0 25px;
   }
   
   .footer-content {
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
     padding: 45px 0 25px;
   }
   
   .footer-about {
     grid-column: 1 / -1;
-    margin-bottom: 10px;
-  }
-  
-  .footer-logo-text {
-    font-size: 1.4rem;
-  }
-  
-  .footer-title {
-    font-size: 1.1rem;
-  }
-}
-
-@media (min-width: 600px) and (max-width: 767px) {
-  .footer-container {
-    padding: 0 20px;
-  }
-  
-  .footer-content {
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    padding: 40px 0 25px;
-  }
-  
-  .footer-about {
-    grid-column: 1 / -1;
-    margin-bottom: 15px;
-  }
-  
-  .social-links {
-    justify-content: center;
-  }
-  
-  .footer-bottom-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 599px) {
-  .footer-container {
-    padding: 0 15px;
-  }
-  
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 35px 0 20px;
-  }
-  
-  .footer-about {
-    grid-column: 1;
-    text-align: center;
-  }
-  
-  .footer-links {
+    margin-bottom: 20px;
     text-align: center;
   }
   
@@ -317,20 +268,274 @@
     justify-content: center;
   }
   
+  .footer-title {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
   .weather-stats,
   .contact-info {
     align-items: center;
+  }
+  
+  .footer-links {
     text-align: center;
+  }
+}
+
+/* Tablet (600px - 767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+  .footer-container {
+    padding: 0 20px;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 40px 0 25px;
+    text-align: center;
+  }
+  
+  .footer-about {
+    grid-column: 1;
+    margin-bottom: 15px;
+  }
+  
+  .footer-logo {
+    justify-content: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .footer-title {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .footer-links {
+    text-align: center;
+  }
+  
+  .weather-stats,
+  .contact-info {
+    align-items: center;
   }
   
   .footer-bottom-content {
     flex-direction: column;
     text-align: center;
-    gap: 6px;
+    gap: 10px;
+  }
+}
+
+/* Large Mobile (480px - 599px) */
+@media (min-width: 480px) and (max-width: 599px) {
+  .footer-container {
+    padding: 0 20px;
   }
   
-  .copyright,
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 35px 0 20px;
+    text-align: center;
+  }
+  
+  .footer-about {
+    gap: 15px;
+  }
+  
+  .footer-logo {
+    justify-content: center;
+  }
+  
+  .footer-logo-text {
+    font-size: 1.4rem;
+  }
+  
+  .footer-description {
+    font-size: 0.95rem;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .social-links {
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .footer-title {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .footer-links {
+    text-align: center;
+  }
+  
+  .footer-link-list {
+    align-items: center;
+  }
+  
+  .weather-stats,
+  .contact-info {
+    align-items: center;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+  
+  .attribution {
+    justify-content: center;
+  }
+}
+
+/* Small Mobile (below 480px) */
+@media (max-width: 479px) {
+  .footer-container {
+    padding: 0 15px;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px 0 15px;
+    text-align: center;
+  }
+  
+  .footer-about {
+    gap: 15px;
+  }
+  
+  .footer-logo {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-logo-icon {
+    font-size: 1.8rem;
+  }
+  
+  .footer-logo-text {
+    font-size: 1.3rem;
+  }
+  
+  .footer-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  .social-links {
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .social-link {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .social-icon {
+    font-size: 1rem;
+  }
+  
+  .footer-title {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  
+  .footer-links {
+    text-align: center;
+  }
+  
+  .footer-link-list {
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .footer-link {
+    font-size: 0.9rem;
+    padding: 3px 0;
+  }
+  
+  .weather-stats {
+    align-items: center;
+    gap: 12px;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  
+  .stat-item {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .stat-icon {
+    font-size: 1.5rem;
+    width: auto;
+  }
+  
+  .stat-content {
+    align-items: center;
+  }
+  
+  .stat-label {
+    font-size: 0.75rem;
+  }
+  
+  .stat-value {
+    font-size: 0.9rem;
+  }
+  
+  .contact-info {
+    align-items: center;
+    gap: 10px;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  
+  .contact-item {
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  
+  .contact-text {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  
+  .footer-bottom {
+    padding: 15px 0;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+  
+  .copyright {
+    font-size: 0.8rem;
+  }
+  
   .attribution {
     font-size: 0.8rem;
+    justify-content: center;
+    line-height: 1.4;
   }
 }
