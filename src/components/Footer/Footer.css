@@ -1,5 +1,5 @@
 .app-footer {
-  background: linear-gradient(135deg, #8b6b4a 0%, #a67c52 100%);
+  background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
   color: white;
   margin-top: auto;
 }
@@ -41,14 +41,14 @@
 .footer-logo-text {
   font-size: 1.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #f1c27d, #deb887);
+  background: linear-gradient(135deg, #3498db, #2980b9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .footer-description {
-  color: #f4e4d0;
+  color: #ffffff;
   line-height: 1.6;
   margin: 0;
 }
@@ -61,7 +61,7 @@
 .social-link {
   width: 40px;
   height: 40px;
-  background: rgba(244, 228, 208, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -72,7 +72,7 @@
 }
 
 .social-link:hover {
-  background: rgba(241, 194, 125, 0.3);
+  background: rgba(52, 152, 219, 0.3);
   transform: translateY(-2px);
 }
 
@@ -84,7 +84,7 @@
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 20px;
-  color: #f1c27d;
+  color: #3498db;
 }
 
 .footer-link-list {
@@ -97,14 +97,14 @@
 }
 
 .footer-link {
-  color: #f4e4d0;
+  color: #ffffff;
   text-decoration: none;
   transition: all 0.3s ease;
   padding: 5px 0;
 }
 
 .footer-link:hover {
-  color: #f1c27d;
+  color: #3498db;
   padding-left: 5px;
 }
 
@@ -134,7 +134,7 @@
 
 .stat-label {
   font-size: 0.8rem;
-  color: #f4e4d0;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -165,13 +165,13 @@
 }
 
 .contact-text {
-  color: #f4e4d0;
+  color: #ffffff;
   font-size: 0.9rem;
   word-break: break-word;
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(244, 228, 208, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding: 20px 0;
 }
 
@@ -184,12 +184,12 @@
 }
 
 .copyright {
-  color: #f4e4d0;
+  color: #ffffff;
   font-size: 0.9rem;
 }
 
 .attribution {
-  color: #f4e4d0;
+  color: #ffffff;
   font-size: 0.9rem;
   display: flex;
   align-items: center;
@@ -198,15 +198,16 @@
 }
 
 .api-link {
-  color: #f1c27d;
+  color: #3498db;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .api-link:hover {
-  color: #deb887;
+  color: #2980b9;
 }
+
 
 /* Large Desktop (1200px+) */
 @media (min-width: 1200px) {

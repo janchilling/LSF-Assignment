@@ -1,8 +1,8 @@
 .app-header {
-  background: rgba(113, 87, 87, 0.95);
+  background: rgba(44, 62, 80, 0.95);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(241, 194, 125, 0.3);
-  box-shadow: 0 2px 20px rgba(139, 107, 74, 0.2);
+  border-bottom: 1px solid rgba(52, 152, 219, 0.3);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -43,9 +43,9 @@
 .logo-title {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #fff8f0;
+  color: #ffffff;
   margin: 0;
-  background: linear-gradient(135deg, #f1c27d, #deb887);
+  background: linear-gradient(135deg, #3498db, #2980b9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -53,7 +53,7 @@
 
 .logo-subtitle {
   font-size: 0.8rem;
-  color: #f4e4d0;
+  color: #ffffff;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -72,7 +72,7 @@
 
 .nav-link {
   text-decoration: none;
-  color: #f4e4d0;
+  color: #ffffff;
   font-weight: 500;
   padding: 8px 16px;
   border-radius: 20px;
@@ -81,25 +81,17 @@
 }
 
 .nav-link:hover {
-  color: #f1c27d;
-  background: rgba(241, 194, 125, 0.15);
+  color: #3498db;
+  background: rgba(52, 152, 219, 0.15);
 }
 
 .nav-link.active {
-  color: #f1c27d;
-  background: rgba(241, 194, 125, 0.2);
+  color: #3498db;
+  background: rgba(52, 152, 219, 0.2);
 }
 
 .nav-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 20px;
-  height: 2px;
-  background: #f1c27d;
-  border-radius: 1px;
+  background: #3498db;
 }
 
 .header-right {
@@ -115,13 +107,13 @@
 .current-time {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #fff8f0;
+  color: #ffffff;
   font-family: 'Courier New', monospace;
 }
 
 .current-date {
   font-size: 0.85rem;
-  color: #f4e4d0;
+  color: #ffffff;
   margin-top: 2px;
 }
 

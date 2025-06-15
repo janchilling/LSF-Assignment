@@ -13,13 +13,13 @@
 .temperature {
   font-size: 4rem;
   font-weight: 300;
-  color: #8b6b4a;
+  color: #2c3e50;
   margin-bottom: 5px;
 }
 
 .temperature-sub {
   font-size: 1.1rem;
-  color: #a67c52;
+  color: #2c3e50;
 }
 
 .condition-section {
@@ -28,7 +28,7 @@
 
 .condition {
   font-size: 1.3rem;
-  color: #8b6b4a;
+  color: #2c3e50;
   margin-bottom: 8px;
   text-transform: capitalize;
   font-weight: 500;
@@ -36,7 +36,7 @@
 
 .local-time {
   font-size: 0.9rem;
-  color: #a67c52;
+  color: #2c3e50;
 }
 
 @media (max-width: 768px) {

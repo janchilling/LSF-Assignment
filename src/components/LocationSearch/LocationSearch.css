@@ -12,29 +12,23 @@
 .search-input {
   width: 100%;
   padding: 12px 40px 12px 15px;
-  border: 2px solid rgba(222, 184, 135, 0.4);
+  border: 2px solid rgba(116, 185, 255, 0.3);
   border-radius: 25px;
   font-size: 1rem;
   outline: none;
   transition: all 0.3s ease;
-  background: rgba(255, 251, 245, 0.9);
-  color: #8b6b4a;
-}
-
-.search-input::placeholder {
-  color: #a67c52;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .search-input:focus {
-  border-color: #deb887;
-  box-shadow: 0 0 0 3px rgba(222, 184, 135, 0.2);
-  background: rgba(255, 251, 245, 1);
+  border-color: #74b9ff;
+  box-shadow: 0 0 0 3px rgba(116, 185, 255, 0.1);
 }
 
 .search-icon {
   position: absolute;
   right: 15px;
-  color: #a67c52;
+  color: #636e72;
   pointer-events: none;
 }
 
@@ -43,21 +37,20 @@
   top: 100%;
   left: 0;
   right: 0;
-  background: rgba(255, 251, 245, 0.98);
+  background: white;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(139, 107, 74, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   max-height: 200px;
   overflow-y: auto;
   margin-top: 5px;
-  border: 1px solid rgba(222, 184, 135, 0.3);
 }
 
 .suggestion-item {
   padding: 12px 15px;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  border-bottom: 1px solid rgba(222, 184, 135, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .suggestion-item:last-child {
@@ -65,39 +58,39 @@
 }
 
 .suggestion-item:hover {
-  background-color: rgba(241, 194, 125, 0.15);
+  background-color: rgba(116, 185, 255, 0.1);
 }
 
 .suggestion-item.loading {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #a67c52;
+  color: #636e72;
   cursor: default;
 }
 
 .suggestion-item.no-results {
-  color: #a67c52;
+  color: #636e72;
   text-align: center;
   cursor: default;
 }
 
 .suggestion-name {
   font-weight: 600;
-  color: #8b6b4a;
+  color: #2d3436;
   margin-bottom: 2px;
 }
 
 .suggestion-details {
   font-size: 0.85rem;
-  color: #a67c52;
+  color: #636e72;
 }
 
 .suggestion-spinner {
   width: 16px;
   height: 16px;
-  border: 2px solid rgba(222, 184, 135, 0.3);
-  border-top: 2px solid #deb887;
+  border: 2px solid #e0e0e0;
+  border-top: 2px solid #74b9ff;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
